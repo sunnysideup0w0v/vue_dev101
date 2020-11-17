@@ -4,21 +4,21 @@
       <img src="../assets/dev101.png" />
       <input placeholder="배우고 싶은 것이 있나요?" />
       <ul>
-        <li><a href="/">크리에이터 지원</a></li>
-        <li><a href="/">로그인</a></li>
+        <li><router-link to="/creatorcenter">크리에이터 지원</router-link></li>
+        <li><router-link to="/login">로그인</router-link></li>
       </ul>
     </div>
     <div>
       <ul>
         <li class="categoryAll">
-          <a href="/">
+          <router-link to="/">
             <span></span>
             <span></span>
             <span></span>
-          </a>
+          </router-link>
         </li>
         <li v-for="category in categories" :key="category">
-          <a href="/">{{ category }}</a>
+          <router-link :to="{ path: category }">{{ category }}</router-link>
         </li>
       </ul>
     </div>
