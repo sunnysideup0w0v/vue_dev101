@@ -18,7 +18,9 @@
           </router-link>
         </li>
         <li v-for="category in categories" :key="category">
-          <router-link :to="{ path: category }">{{ category }}</router-link>
+          <router-link :to="{ path: `/category/${category}` }">{{
+            category
+          }}</router-link>
         </li>
       </ul>
     </div>
@@ -59,11 +61,20 @@ img {
     input {
       width: 400px;
       padding: 5px 10px;
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 1px 0px,
+        rgba(41, 42, 43, 0.16) 0px 1px 3px 0px;
     }
 
     &:nth-child(1) {
       ul {
         margin-left: auto;
+        li {
+          margin-right: 20px;
+          &:nth-child(2) {
+            margin-right: 0;
+          }
+        }
       }
     }
     &:nth-child(2) {
