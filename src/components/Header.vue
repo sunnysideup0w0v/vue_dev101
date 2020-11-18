@@ -83,9 +83,18 @@ img {
         justify-content: space-between;
         li {
           cursor: pointer;
+          a {
+            padding-bottom: 5px;
+            &.exact-active {
+              border-bottom: 3px solid #000;
+            }
+          }
 
           &:hover {
             font-weight: 600;
+            a {
+              border-bottom: 3px solid #000;
+            }
           }
 
           &:nth-child(1) {
